@@ -22,7 +22,7 @@ public class Log {
 			}
 		}
 		try {
-			this.writer = new PrintWriter(fileName, StandardCharsets.UTF_8);
+			this.writer = new PrintWriter(fileName, String.valueOf(StandardCharsets.UTF_8));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
