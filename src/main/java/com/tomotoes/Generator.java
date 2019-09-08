@@ -41,10 +41,10 @@ public class Generator {
 		IntStream.range(0, this.quantity).forEach(i -> {
 			String num = number.getRandom();
 
-//      There may be a bug.
-//      If the bounds of the operand are 0, you can only randomize the number in [0,1), so num is always equal to 0.
-//      If 0 is preceded by a "/" sign, then it is in an infinite loop.
-//      So let the exception of "/ 0" exist, in the subsequent parse process, the exception will be reported, and then the processing can be captured.
+			// There may be a bug.
+			// If the bounds of the operand are 0, you can only randomize the number in [0,1), so num is always equal to 0.
+			// If 0 is preceded by a "/" sign, then it is in an infinite loop.
+			// So let the exception of "/ 0" exist, in the subsequent parse process, the exception will be reported, and then the processing can be captured.
 			if ("0".equals(num) && formula.toString().endsWith("/ ") && bound > 1) {
 				while ("0".equals(num)) {
 					num = number.getRandom();

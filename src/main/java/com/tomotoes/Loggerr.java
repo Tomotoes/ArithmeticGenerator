@@ -4,7 +4,7 @@ import com.tomotoes.utils.LoggerFormatter;
 import lombok.SneakyThrows;
 import lombok.extern.java.Log;
 
-import java.io.*;
+import java.io.File;
 import java.util.logging.*;
 
 /**
@@ -22,9 +22,13 @@ public class Loggerr {
 		if (!file.exists()) {
 			file.createNewFile();
 		}
+		log.setUseParentHandlers(false);
 		FileHandler fileHandler = new FileHandler(fileName);
 		fileHandler.setFormatter(new LoggerFormatter());
+		ConsoleHandler consoleHandler = new ConsoleHandler();
+		consoleHandler.setFormatter(new LoggerFormatter());
 		log.addHandler(fileHandler);
+		log.addHandler(consoleHandler);
 	}
 
 	public void log(String message) {

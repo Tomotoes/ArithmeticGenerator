@@ -50,16 +50,19 @@ public class Commander {
 			val filePath = commandLine.getOptionValue("f", Option.getDefaultFilePath());
 
 			if (bound < 0 || amount < 0 || quantity <= 1) {
-				log.warning("Input parameter error. See 'java -jar arithmetic-generator-1.0-SNAPSHOT --help'");
-				System.exit(1);
+				exit();
 			}
 
 			return new Option(amount, mulAndDiv, bound, negative, quantity, filePath);
 		} catch (ParseException e) {
 			e.printStackTrace();
-			log.warning("Input parameter error. See 'java -jar arithmetic-generator-1.0-SNAPSHOT --help'");
-			System.exit(1);
+			exit();
 		}
 		return null;
+	}
+
+	private static void exit() {
+		log.warning("Input parameter error. See 'java -jar arithmetic-generator-1.0-SNAPSHOT --help'");
+		System.exit(1);
 	}
 }
