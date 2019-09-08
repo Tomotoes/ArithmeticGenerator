@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4df1f1ac-e860-4a4f-b1ce-3e113b5608f4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tomotoes/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tomotoes/Generator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tomotoes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tomotoes/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tomotoes/Number.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tomotoes/utils/Number.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tomotoes/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tomotoes/utils/Operator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tomotoes/Script.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tomotoes/Script.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +88,7 @@
       <option name="PROGRAM_PARAMETERS" value="-a 20 -b 1000 -m -negative -q 10" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.tomotoes.*" />
+          <option name="PATTERN" value="com.tomotoes.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -110,7 +114,7 @@
       <updated>1567840139715</updated>
       <workItem from="1567840152771" duration="15652000" />
       <workItem from="1567859131060" duration="4005000" />
-      <workItem from="1567899763739" duration="3533000" />
+      <workItem from="1567899763739" duration="3684000" />
     </task>
     <servers />
   </component>

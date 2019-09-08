@@ -1,5 +1,7 @@
 package com.tomotoes;
 
+import com.tomotoes.utils.Number;
+import com.tomotoes.utils.Operator;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.val;

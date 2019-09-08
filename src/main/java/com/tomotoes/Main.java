@@ -6,9 +6,9 @@ import java.util.stream.IntStream;
 
 /**
  * @author Simon
- * @project formula
+ * @project arithmetic-generator
  * @package com.tomotoes
- * @date 2019/9/7 11:39
+ * @date 2019/9/7 15:39
  */
 public class Main {
 	public static void main(String[] args) {

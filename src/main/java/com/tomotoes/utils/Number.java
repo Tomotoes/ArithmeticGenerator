@@ -1,4 +1,4 @@
-package com.tomotoes;
+package com.tomotoes.utils;
 
 import java.util.Random;
 

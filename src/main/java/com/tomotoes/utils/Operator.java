@@ -1,12 +1,12 @@
-package com.tomotoes;
+package com.tomotoes.utils;
 
 import java.util.ArrayList;
 
 /**
  * @author Simon
- * @project formula
+ * @project arithmetic-generator
  * @package com.tomotoes
- * @date 2019/9/7 11:40
+ * @date 2019/9/7 16:40
  */
 public class Operator {
 	private static String ADD = "+";

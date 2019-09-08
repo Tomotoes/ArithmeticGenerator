@@ -4,9 +4,9 @@ import com.udojava.evalex.Expression;
 
 /**
  * @author Simon
- * @project formula
+ * @project arithmetic-generator
  * @package com.tomotoes
- * @date 2019/9/7 11:24
+ * @date 2019/9/7 13:24
  */
 public class Script {
 
