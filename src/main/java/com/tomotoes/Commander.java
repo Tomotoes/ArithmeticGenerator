@@ -1,5 +1,6 @@
 package com.tomotoes;
 
+import lombok.extern.java.Log;
 import lombok.val;
 import org.apache.commons.cli.*;
 
@@ -9,7 +10,7 @@ import org.apache.commons.cli.*;
  * @package com.tomotoes
  * @date 2019/9/7 18:41
  */
-
+@Log
 public class Commander {
 
 	private static Options options = new Options();
@@ -48,9 +49,15 @@ public class Commander {
 			val quantity = Integer.parseInt(commandLine.getOptionValue("q", Option.getDefaultQuantity()));
 			val filePath = commandLine.getOptionValue("f", Option.getDefaultFilePath());
 
+			if (bound <= 0 || amount < 0 || quantity <= 1) {
+				log.warning("Input parameter error. See 'java -jar arithmetic-generator-1.0-SNAPSHOT --help'");
+				System.exit(1);
+			}
+
 			return new Option(amount, mulAndDiv, bound, negative, quantity, filePath);
 		} catch (ParseException e) {
 			e.printStackTrace();
+			log.warning("Input parameter error. See 'java -jar arithmetic-generator-1.0-SNAPSHOT --help'");
 			System.exit(1);
 		}
 		return null;

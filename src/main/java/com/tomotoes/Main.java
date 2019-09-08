@@ -1,5 +1,6 @@
 package com.tomotoes;
 
+import lombok.extern.java.Log;
 import lombok.val;
 
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ import java.util.stream.IntStream;
  * @package com.tomotoes
  * @date 2019/9/7 15:39
  */
+@Log
 public class Main {
 	public static ArrayList<String> result;
 	public static Generator generator;
@@ -27,11 +29,12 @@ public class Main {
 		val arithmetics = generator.getArithmetics();
 
 		Map<String, Double> map = new HashMap<>(arithmetics.size());
-		arithmetics.parallelStream().forEach(arithmetic -> map.put(arithmetic, Script.eval(arithmetic)));
+		arithmetics.forEach(arithmetic -> map.put(arithmetic, Script.eval(arithmetic)));
 
 		return map.entrySet().parallelStream()
 			.filter(entry -> entry.getValue() <= option.getBound())
 			.map(entry -> entry.getKey() + " = " + entry.getValue())
+			.filter(s -> !result.contains(s))
 			.collect(Collectors.toList());
 	}
 
@@ -40,8 +43,22 @@ public class Main {
 		generator = new Generator(option);
 		result = new ArrayList<>(option.getAmount());
 
+		int numberOfAttempts = 0;
+		val maximumOfAttempts = 30;
+
 		while (result.size() != option.getAmount()) {
-			result.addAll(getResult(option.getAmount() - result.size()));
+			val r = getResult(option.getAmount() - result.size());
+
+			// There may be failures.
+			// For example, requiring 1000 arithmetics to be generated, and the maximum number of operands is 2 and the maximum number of operands is 2.
+			// Obviously, this is not possible.
+			numberOfAttempts = r.size() != 0 ? 0 : numberOfAttempts + 1;
+			if (numberOfAttempts == maximumOfAttempts) {
+				log.warning("Unable to generate the specified number of arithmetic.");
+				return;
+			}
+
+			result.addAll(r);
 		}
 
 		Loggerr logger = new Loggerr(option.getFilePath());

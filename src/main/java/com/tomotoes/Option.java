@@ -40,9 +40,7 @@ public class Option {
 		return "100";
 	}
 
-	public static String getDefaultQuantity() {
-		return "2";
-	}
+	public static String getDefaultQuantity() { return "2"; }
 
 	public static String getDefaultFilePath() {
 		return "./result.txt";

@@ -8,6 +8,8 @@ import lombok.Setter;
 import lombok.val;
 
 import java.util.ArrayList;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 import java.util.stream.IntStream;
 
 /**
@@ -23,10 +25,13 @@ public class Generator {
 	private Number number;
 	private Operator operator;
 	private int quantity;
+	private int bound;
+	private Lock lock = new ReentrantLock();
 
 	public Generator(@NonNull Option option) {
 		this.quantity = option.getQuantity();
-		this.number = new Number(option.getBound(), option.negative);
+		this.bound = option.getBound();
+		this.number = new Number(bound, option.negative);
 		this.operator = new Operator(option.mulAndDiv);
 	}
 
@@ -36,7 +41,10 @@ public class Generator {
 		IntStream.range(0, this.quantity).forEach(i -> {
 			String num = number.getRandom();
 
-			if ("0".equals(num) && formula.toString().endsWith("/ ")) {
+//      可能存在 bug , 假如操作数的范围(bound)是 1, 所以只能随机 [0,1) 中的数字, 即 num 一直等于 0
+//      如果 0 之前是一个 "/" 号, 那么就陷入了 死循环
+
+			if ("0".equals(num) && formula.toString().endsWith("/ ") && bound > 1) {
 				while ("0".equals(num)) {
 					num = number.getRandom();
 				}
@@ -49,7 +57,9 @@ public class Generator {
 			formula.append(' ').append(operator.getRandom()).append(' ');
 		});
 
+		lock.lock();
 		this.arithmetics.add(formula.toString());
+		lock.unlock();
 	}
 
 }
