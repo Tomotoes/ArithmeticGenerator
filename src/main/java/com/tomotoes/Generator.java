@@ -7,9 +7,7 @@ import lombok.NonNull;
 import lombok.Setter;
 import lombok.val;
 
-import java.util.ArrayList;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.stream.IntStream;
 
 /**
@@ -21,12 +19,11 @@ import java.util.stream.IntStream;
 public class Generator {
 	@Getter
 	@Setter
-	private ArrayList<String> arithmetics;
+	private CopyOnWriteArrayList<String> arithmetics;
 	private Number number;
 	private Operator operator;
 	private int quantity;
 	private int bound;
-	private Lock lock = new ReentrantLock();
 
 	public Generator(@NonNull Option option) {
 		this.quantity = option.getQuantity();
@@ -58,9 +55,7 @@ public class Generator {
 			formula.append(' ').append(operator.getRandom()).append(' ');
 		});
 
-		lock.lock();
 		this.arithmetics.add(formula.toString());
-		lock.unlock();
 	}
 
 }

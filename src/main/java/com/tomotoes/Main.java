@@ -4,10 +4,10 @@ import lombok.extern.java.Log;
 import lombok.val;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -24,13 +24,13 @@ public class Main {
 	public static Option option;
 
 	public static List<String> getResult(int amount) {
-		generator.setArithmetics(new ArrayList<>());
+		generator.setArithmetics(new CopyOnWriteArrayList<>());
 
 		IntStream.range(0, amount).parallel().forEach(generator::generate);
 		val arithmetics = generator.getArithmetics();
 
 		Map<String, Double> resultsInArithmetics = new ConcurrentHashMap<>(arithmetics.size());
-		arithmetics.stream()
+		arithmetics.parallelStream()
 			.filter(arithmetic -> results.parallelStream().noneMatch(result -> result.startsWith(arithmetic)))
 			.forEach(arithmetic -> resultsInArithmetics.put(arithmetic, Script.eval(arithmetic)));
 
