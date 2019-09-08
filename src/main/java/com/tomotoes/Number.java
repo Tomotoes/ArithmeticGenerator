@@ -1,7 +1,5 @@
 package com.tomotoes;
 
-import lombok.val;
-
 import java.util.Random;
 
 /**
@@ -25,6 +23,6 @@ public class Number {
 		if (negative && Math.random() < 0.5) {
 			number = -number;
 		}
-		return number >= 0 ? Integer.toString(number) : "(" + Integer.toString(number) + ")";
+		return number >= 0 ? Integer.toString(number) : "(" + number + ")";
 	}
 }

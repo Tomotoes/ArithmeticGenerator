@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4df1f1ac-e860-4a4f-b1ce-3e113b5608f4" name="Default Changelist" comment="" />
+    <list default="true" id="4df1f1ac-e860-4a4f-b1ce-3e113b5608f4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tomotoes/Args.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tomotoes/Args.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tomotoes/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tomotoes/Generator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tomotoes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tomotoes/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tomotoes/Number.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tomotoes/Number.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tomotoes/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tomotoes/Operator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tomotoes/Option.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tomotoes/Option.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +45,15 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1QUzolyPR58lULIta2fzXkpiDQC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.import.settings.migrated" value="true" />
@@ -49,7 +64,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+    <property name="settings.editor.selected.configurable" value="custom.title" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -100,11 +115,28 @@
       <option name="presentableId" value="Default" />
       <updated>1567840139715</updated>
       <workItem from="1567840152771" duration="15652000" />
-      <workItem from="1567859131060" duration="3148000" />
+      <workItem from="1567859131060" duration="4005000" />
+      <workItem from="1567899763739" duration="3007000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

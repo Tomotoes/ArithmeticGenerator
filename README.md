@@ -15,8 +15,9 @@
 
 ## 💡介绍
 
-<p align="center"><img src="https://cdn.jsdelivr.net/gh/Tomotoes/images/demo/arithmetic-generator.gif"/></p>
+开源地址: [https://github.com/Tomotoes/arithmetic-generator](https://github.com/Tomotoes/arithmetic-generator)
 
+<p align="center"><img src="https://cdn.jsdelivr.net/gh/Tomotoes/images/demo/arithmetic-generator.gif"/></p>
 
 
 一个功能强大的四则运算生成器.

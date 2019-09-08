@@ -20,6 +20,7 @@ public class Args {
 		options.addOption("b", "bound", true, "The range of number, the default is 100");
 		options.addOption("n", "negative", false, "Whether it contains negative numbers, the default is false");
 		options.addOption("q", "quantity", true, "The number of numbers, the default is 2");
+		options.addOption("f", "filePath", true, "The path of file, the default is ./result.txt");
 		options.addOption("h", "help", false, "Print help");
 	}
 
@@ -43,7 +44,9 @@ public class Args {
 			val negative = commandLine.hasOption("n");
 			val quantity = Integer.parseInt(commandLine.getOptionValue("q", "2"));
 
-			return new Option(amount, mulAndDiv, bound, negative, quantity);
+			val filePath = commandLine.getOptionValue("f", "./result.txt");
+
+			return new Option(amount, mulAndDiv, bound, negative, quantity, filePath);
 		} catch (ParseException e) {
 			e.printStackTrace();
 			System.exit(1);

@@ -1,7 +1,6 @@
 package com.tomotoes;
 
 import lombok.Data;
-import lombok.Getter;
 
 /**
  * @author Simon
@@ -21,12 +20,15 @@ public class Option {
 	public boolean negative = false;
 	// 方程中数字的数量
 	public int quantity;
+	//生成的文件路径
+	public String filePath;
 
-	public Option(int amount, boolean mulAndDiv, int bound, boolean negative, int quantity) {
+	public Option(int amount, boolean mulAndDiv, int bound, boolean negative, int quantity, String filePath) {
 		setAmount(amount);
 		setMulAndDiv(mulAndDiv);
 		setBound(bound);
 		setNegative(negative);
 		setQuantity(quantity);
+		setFilePath(filePath);
 	}
 }

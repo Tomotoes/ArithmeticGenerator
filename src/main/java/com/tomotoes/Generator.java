@@ -21,26 +21,25 @@ public class Generator {
 	private int quantity;
 
 	public Generator(@NonNull Option option) {
-		val amount = option.getAmount();
-		this.arithmetics = new ArrayList<>(amount);
+		this.arithmetics = new ArrayList<>(option.getAmount());
 		this.quantity = option.getQuantity();
 		this.number = new Number(option.getBound(), option.negative);
 		this.operator = new Operator(option.mulAndDiv);
-		IntStream.range(0, amount).forEach(i -> this.generate());
 	}
 
-	public void generate() {
+	public void generate(int j) {
 		StringBuilder formula = new StringBuilder();
 
 		IntStream.range(0, quantity).forEach(i -> {
 			String num = number.getRandom();
 
 			val isDiv = formula.toString().trim().endsWith("/");
-			if(isDiv){
+			if (isDiv) {
 				while ("0".equals(num)) {
 					num = number.getRandom();
 				}
 			}
+
 			formula.append(number.getRandom());
 
 			if (i != this.quantity - 1) {
@@ -49,10 +48,10 @@ public class Generator {
 		});
 
 		if (!arithmetics.contains(formula.toString())) {
-			this.arithmetics.add(formula + " = " + Script.resolve(formula.toString()));
+			this.arithmetics.add(formula.toString());
 			return;
 		}
-		generate();
+		generate(0);
 	}
 
 }
