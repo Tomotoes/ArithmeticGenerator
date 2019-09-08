@@ -45,7 +45,6 @@ public class Main {
 
 		int numberOfAttempts = 0;
 		val maximumOfAttempts = 30;
-
 		while (result.size() != option.getAmount()) {
 			val r = getResult(option.getAmount() - result.size());
 

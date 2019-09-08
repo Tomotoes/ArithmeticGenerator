@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4df1f1ac-e860-4a4f-b1ce-3e113b5608f4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/result.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tomotoes/Commander.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tomotoes/Commander.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tomotoes/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tomotoes/Generator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tomotoes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tomotoes/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tomotoes/Option.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tomotoes/Option.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tomotoes/utils/Number.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tomotoes/utils/Number.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +86,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.tomotoes.Main" />
       <module name="arithmetic-generator.main" />
-      <option name="PROGRAM_PARAMETERS" value="-a 1000 -b 1 -q 2" />
+      <option name="PROGRAM_PARAMETERS" value="-a 100 -b 0 -q 2 -n" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.tomotoes.utils.*" />
@@ -116,7 +117,7 @@
       <workItem from="1567859131060" duration="4005000" />
       <workItem from="1567899763739" duration="6474000" />
       <workItem from="1567918568130" duration="9044000" />
-      <workItem from="1567941999328" duration="4512000" />
+      <workItem from="1567941999328" duration="5105000" />
     </task>
     <servers />
   </component>

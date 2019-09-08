@@ -14,7 +14,7 @@ public class Number {
 	private Random random = new Random();
 
 	public Number(int bound, boolean negative) {
-		this.bound = bound;
+		this.bound = bound + 1;
 		this.negative = negative;
 	}
 

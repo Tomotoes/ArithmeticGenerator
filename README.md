@@ -16,7 +16,6 @@
 ## 💡介绍
 
 <p align="center"><img src="https://cdn.jsdelivr.net/gh/Tomotoes/images/demo/arithmetic-generator.gif"/></p>
-
 一个功能强大的四则运算生成器.
 
 *上课作业,不得不向恶势力低头...*
@@ -31,7 +30,8 @@
 - 支持负数
 - 可配置公式中数字的数量
 - 可配置生成的文件路径
-- 多线程生成方程, 更快
+- 多线程生成方程, 充分利用每个CPU, 更快
+- 完善的错误处理机制
 
 
 
