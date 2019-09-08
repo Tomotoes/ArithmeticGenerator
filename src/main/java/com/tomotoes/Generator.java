@@ -17,15 +17,13 @@ import java.util.stream.IntStream;
  * @date 2019/9/7 18:48
  */
 public class Generator {
-	@Getter
-	@Setter
+	@Getter @Setter
 	private ArrayList<String> arithmetics;
 	private Number number;
 	private Operator operator;
 	private int quantity;
 
 	public Generator(@NonNull Option option) {
-		this.arithmetics = new ArrayList<>();
 		this.quantity = option.getQuantity();
 		this.number = new Number(option.getBound(), option.negative);
 		this.operator = new Operator(option.mulAndDiv);
@@ -34,7 +32,7 @@ public class Generator {
 	public void generate(int j) {
 		val formula = new StringBuilder();
 
-		IntStream.range(0, quantity).forEach(i -> {
+		IntStream.range(0, this.quantity).forEach(i -> {
 			formula.append(number.getRandom());
 			if (i == this.quantity - 1) {
 				return;

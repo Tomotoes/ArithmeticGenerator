@@ -23,7 +23,7 @@ public class Main {
 	public static List<String> getResult(int amount) {
 		generator.setArithmetics(new ArrayList<>());
 
-		IntStream.range(0, amount).forEach(generator::generate);
+		IntStream.range(0, amount).parallel().forEach(generator::generate);
 		val arithmetics = generator.getArithmetics();
 
 		Map<String, Double> map = new HashMap<>(arithmetics.size());
