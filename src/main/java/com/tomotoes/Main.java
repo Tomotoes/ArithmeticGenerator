@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -28,7 +29,7 @@ public class Main {
 		IntStream.range(0, amount).parallel().forEach(generator::generate);
 		val arithmetics = generator.getArithmetics();
 
-		Map<String, Double> resultsInArithmetics = new HashMap<>(arithmetics.size());
+		Map<String, Double> resultsInArithmetics = new ConcurrentHashMap<>(arithmetics.size());
 		arithmetics.stream()
 			.filter(arithmetic -> results.parallelStream().noneMatch(result -> result.startsWith(arithmetic)))
 			.forEach(arithmetic -> resultsInArithmetics.put(arithmetic, Script.eval(arithmetic)));
