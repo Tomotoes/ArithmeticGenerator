@@ -18,7 +18,7 @@ public class Main {
 		IntStream.range(0, option.getAmount()).forEach(generator::generate);
 		val arithmetics = generator.getArithmetics();
 
-		val result = arithmetics.stream().map(arithmetic -> arithmetic + " = " + Script.resolve(arithmetic));
+		val result = arithmetics.parallelStream().map(arithmetic -> arithmetic + " = " + Script.resolve(arithmetic));
 
 		Log log = new Log(option.getFilePath());
 		result.forEach(log::toFile);
