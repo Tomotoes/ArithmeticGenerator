@@ -29,12 +29,13 @@ public class Main {
 		val arithmetics = generator.getArithmetics();
 
 		Map<String, Double> map = new HashMap<>(arithmetics.size());
-		arithmetics.forEach(arithmetic -> map.put(arithmetic, Script.eval(arithmetic)));
+		arithmetics.stream()
+			.filter(arithmetic -> result.parallelStream().noneMatch(r -> r.startsWith(arithmetic)))
+			.forEach(arithmetic -> map.put(arithmetic, Script.eval(arithmetic)));
 
 		return map.entrySet().parallelStream()
 			.filter(entry -> entry.getValue() <= option.getBound())
 			.map(entry -> entry.getKey() + " = " + entry.getValue())
-			.filter(s -> !result.contains(s))
 			.collect(Collectors.toList());
 	}
 
