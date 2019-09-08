@@ -17,7 +17,8 @@ import java.util.stream.IntStream;
  * @date 2019/9/7 18:48
  */
 public class Generator {
-	@Getter @Setter
+	@Getter
+	@Setter
 	private ArrayList<String> arithmetics;
 	private Number number;
 	private Operator operator;
@@ -33,7 +34,15 @@ public class Generator {
 		val formula = new StringBuilder();
 
 		IntStream.range(0, this.quantity).forEach(i -> {
-			formula.append(number.getRandom());
+			String num = number.getRandom();
+
+			if ("0".equals(num) && formula.toString().endsWith("/ ")) {
+				while ("0".equals(num)) {
+					num = number.getRandom();
+				}
+			}
+
+			formula.append(num);
 			if (i == this.quantity - 1) {
 				return;
 			}
