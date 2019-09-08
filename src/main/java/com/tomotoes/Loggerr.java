@@ -16,19 +16,13 @@ import java.util.logging.*;
 
 @Log
 public class Loggerr {
-	private FileHandler fileHandler;
-
 	@SneakyThrows
 	public Loggerr(String fileName) {
 		File file = new File(fileName);
 		if (!file.exists()) {
-			try {
-				file.createNewFile();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+			file.createNewFile();
 		}
-		fileHandler = new FileHandler(fileName);
+		FileHandler fileHandler = new FileHandler(fileName);
 		fileHandler.setFormatter(new LoggerFormatter());
 		log.addHandler(fileHandler);
 	}

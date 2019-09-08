@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4df1f1ac-e860-4a4f-b1ce-3e113b5608f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tomotoes/utils/LoggerFormatter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/result.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tomotoes/Args.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tomotoes/Commander.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tomotoes/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tomotoes/Generator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tomotoes/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tomotoes/Loggerr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tomotoes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tomotoes/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tomotoes/Option.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tomotoes/Option.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tomotoes/Script.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tomotoes/Script.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tomotoes/Loggerr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tomotoes/Loggerr.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,33 +78,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Logger" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.tomotoes.Logger" />
-      <module name="arithmetic-generator.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tomotoes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Loggerr" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.tomotoes.Loggerr" />
-      <module name="arithmetic-generator.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tomotoes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.tomotoes.Main" />
       <module name="arithmetic-generator.main" />
@@ -126,31 +93,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Script" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.tomotoes.Script" />
-      <module name="arithmetic-generator.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tomotoes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.Script" />
-      <item itemvalue="Application.Logger" />
-      <item itemvalue="Application.Loggerr" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Loggerr" />
-        <item itemvalue="Application.Logger" />
-        <item itemvalue="Application.Script" />
       </list>
     </recent_temporary>
   </component>
@@ -167,7 +112,7 @@
       <workItem from="1567840152771" duration="15652000" />
       <workItem from="1567859131060" duration="4005000" />
       <workItem from="1567899763739" duration="6474000" />
-      <workItem from="1567918568130" duration="7152000" />
+      <workItem from="1567918568130" duration="7833000" />
     </task>
     <servers />
   </component>
