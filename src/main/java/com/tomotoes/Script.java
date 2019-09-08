@@ -1,6 +1,7 @@
 package com.tomotoes;
 
 import com.udojava.evalex.Expression;
+import lombok.val;
 
 /**
  * @author Simon
@@ -10,7 +11,12 @@ import com.udojava.evalex.Expression;
  */
 public class Script {
 
-	public static String resolve(String script) {
-		return new Expression(script).eval().toString();
+	public static double eval(String script) {
+		try {
+			val result = new Expression(script).eval().toString();
+			return Double.parseDouble(result);
+		} catch (ArithmeticException e) {
+			return Double.MAX_VALUE;
+		}
 	}
 }

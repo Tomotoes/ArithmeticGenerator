@@ -4,6 +4,7 @@ import com.tomotoes.utils.Number;
 import com.tomotoes.utils.Operator;
 import lombok.Getter;
 import lombok.NonNull;
+import lombok.Setter;
 import lombok.val;
 
 import java.util.ArrayList;
@@ -17,43 +18,31 @@ import java.util.stream.IntStream;
  */
 public class Generator {
 	@Getter
+	@Setter
 	private ArrayList<String> arithmetics;
 	private Number number;
 	private Operator operator;
 	private int quantity;
 
 	public Generator(@NonNull Option option) {
-		this.arithmetics = new ArrayList<>(option.getAmount());
+		this.arithmetics = new ArrayList<>();
 		this.quantity = option.getQuantity();
 		this.number = new Number(option.getBound(), option.negative);
 		this.operator = new Operator(option.mulAndDiv);
 	}
 
 	public void generate(int j) {
-		StringBuilder formula = new StringBuilder();
+		val formula = new StringBuilder();
 
 		IntStream.range(0, quantity).forEach(i -> {
-			String num = number.getRandom();
-
-			val isDiv = formula.toString().trim().endsWith("/");
-			if (isDiv) {
-				while ("0".equals(num)) {
-					num = number.getRandom();
-				}
-			}
-
 			formula.append(number.getRandom());
-
-			if (i != this.quantity - 1) {
-				formula.append(' ').append(operator.getRandom()).append(' ');
+			if (i == this.quantity - 1) {
+				return;
 			}
+			formula.append(' ').append(operator.getRandom()).append(' ');
 		});
 
-		if (!arithmetics.contains(formula.toString())) {
-			this.arithmetics.add(formula.toString());
-			return;
-		}
-		generate(0);
+		this.arithmetics.add(formula.toString());
 	}
 
 }

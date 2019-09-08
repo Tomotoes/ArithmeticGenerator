@@ -10,7 +10,7 @@ import org.apache.commons.cli.*;
  * @date 2019/9/7 18:41
  */
 
-public class Args {
+public class Commander {
 
 	private static Options options = new Options();
 
@@ -29,8 +29,10 @@ public class Args {
 
 		CommandLineParser parser = new DefaultParser();
 		CommandLine commandLine;
+
 		try {
 			commandLine = parser.parse(options, args);
+
 			if (commandLine.hasOption("h")) {
 				HelpFormatter hf = new HelpFormatter();
 				hf.setWidth(110);
@@ -38,13 +40,13 @@ public class Args {
 				System.exit(0);
 				return null;
 			}
-			val amount = Integer.parseInt(commandLine.getOptionValue("a", "10"));
-			val mulAndDiv = commandLine.hasOption("m");
-			val bound = Integer.parseInt(commandLine.getOptionValue("b", "100"));
-			val negative = commandLine.hasOption("n");
-			val quantity = Integer.parseInt(commandLine.getOptionValue("q", "2"));
 
-			val filePath = commandLine.getOptionValue("f", "./result.txt");
+			val amount = Integer.parseInt(commandLine.getOptionValue("a", Option.getDefaultAmount()));
+			val mulAndDiv = commandLine.hasOption("m");
+			val bound = Integer.parseInt(commandLine.getOptionValue("b", Option.getDefaultBound()));
+			val negative = commandLine.hasOption("n");
+			val quantity = Integer.parseInt(commandLine.getOptionValue("q", Option.getDefaultQuantity()));
+			val filePath = commandLine.getOptionValue("f", Option.getDefaultFilePath());
 
 			return new Option(amount, mulAndDiv, bound, negative, quantity, filePath);
 		} catch (ParseException e) {

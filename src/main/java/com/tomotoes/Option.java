@@ -31,4 +31,20 @@ public class Option {
 		setQuantity(quantity);
 		setFilePath(filePath);
 	}
+
+	public static String getDefaultAmount() {
+		return "10";
+	}
+
+	public static String getDefaultBound() {
+		return "100";
+	}
+
+	public static String getDefaultQuantity() {
+		return "2";
+	}
+
+	public static String getDefaultFilePath() {
+		return "./result.txt";
+	}
 }
