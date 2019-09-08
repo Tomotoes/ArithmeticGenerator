@@ -16,13 +16,13 @@ public class Commander {
 	private static Options options = new Options();
 
 	public static void setOptions() {
-		options.addOption("a", "amount", true, "The number of arithmetics, the default is 10");
-		options.addOption("m", "mulAndDiv", false, "Whether to include multiplication and division operations, the default is false");
-		options.addOption("b", "bound", true, "The range of number, the default is 100");
-		options.addOption("n", "negative", false, "Whether it contains negative numbers, the default is false");
-		options.addOption("q", "quantity", true, "The number of numbers, the default is 2");
-		options.addOption("f", "filePath", true, "The path of file, the default is ./result.txt");
-		options.addOption("h", "help", false, "Print help");
+		options.addOption("a", "amount", true, "The number of arithmetics, the default is 10.");
+		options.addOption("m", "mulAndDiv", false, "Whether to include multiplication and division operations, the default is false.");
+		options.addOption("b", "bound", true, "The range of number, the default is 100.");
+		options.addOption("n", "negative", false, "Whether it contains negative numbers, the default is false.");
+		options.addOption("q", "quantity", true, "The number of numbers in arithmetic, the default is 2.");
+		options.addOption("f", "filePath", true, "The path of file, the default is ./result.txt.");
+		options.addOption("h", "help", false, "Print help information.");
 	}
 
 	public static Option parse(String[] args) {

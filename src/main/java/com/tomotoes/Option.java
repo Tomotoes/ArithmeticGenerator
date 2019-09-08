@@ -10,17 +10,17 @@ import lombok.Data;
  */
 @Data
 public class Option {
-	// 方程数量
+	// The number of arithmetics, the default is 10.
 	public int amount = 10;
-	// 是否包含乘除
+	// Whether to include multiplication and division operations, the default is false.
 	public boolean mulAndDiv = false;
-	// 数值范围
+	// The range of number, the default is 100.
 	public int bound = 100;
-	// 是否包含负数
+	// Whether it contains negative numbers, the default is false.
 	public boolean negative = false;
-	// 方程中数字的数量
+	// The number of numbers in arithmetic, the default is 2.
 	public int quantity;
-	//生成的文件路径
+	// The path of file, the default is ./result.txt.
 	public String filePath;
 
 	public Option(int amount, boolean mulAndDiv, int bound, boolean negative, int quantity, String filePath) {

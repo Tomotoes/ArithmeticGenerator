@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4df1f1ac-e860-4a4f-b1ce-3e113b5608f4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/result.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tomotoes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tomotoes/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tomotoes/Commander.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tomotoes/Commander.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tomotoes/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tomotoes/Generator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tomotoes/Option.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tomotoes/Option.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -128,7 +129,7 @@
       <workItem from="1567899763739" duration="6474000" />
       <workItem from="1567918568130" duration="9044000" />
       <workItem from="1567941999328" duration="5720000" />
-      <workItem from="1567948008967" duration="585000" />
+      <workItem from="1567948008967" duration="1115000" />
     </task>
     <servers />
   </component>
