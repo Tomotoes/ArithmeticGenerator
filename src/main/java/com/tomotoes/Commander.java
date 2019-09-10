@@ -49,20 +49,12 @@ public class Commander {
 			val quantity = Integer.parseInt(commandLine.getOptionValue("q", Option.getDefaultQuantity()));
 			val filePath = commandLine.getOptionValue("f", Option.getDefaultFilePath());
 
-			if (bound < 0 || amount < 0 || quantity <= 1) {
-				exit();
-			}
-
 			return new Option(amount, mulAndDiv, bound, negative, quantity, filePath);
 		} catch (ParseException e) {
 			e.printStackTrace();
-			exit();
+			log.warning(e.getMessage());
+			System.exit(1);
 		}
 		return null;
-	}
-
-	private static void exit() {
-		log.warning("Input parameter error. See 'java -jar arithmetic-generator-1.0-SNAPSHOT --help'");
-		System.exit(1);
 	}
 }

@@ -1,6 +1,7 @@
 package com.tomotoes;
 
 import lombok.Data;
+import lombok.extern.java.Log;
 
 /**
  * @author Simon
@@ -9,6 +10,7 @@ import lombok.Data;
  * @date 2019/9/7 16:40
  */
 @Data
+@Log
 public class Option {
 	// The number of arithmetics, the default is 10.
 	public int amount = 10;
@@ -24,6 +26,11 @@ public class Option {
 	public String filePath;
 
 	public Option(int amount, boolean mulAndDiv, int bound, boolean negative, int quantity, String filePath) {
+		if (bound < 0 || amount < 0 || quantity <= 1) {
+			log.warning("Input parameter error. See 'java -jar arithmetic-generator-1.0-SNAPSHOT --help'");
+			System.exit(1);
+		}
+
 		setAmount(amount);
 		setMulAndDiv(mulAndDiv);
 		setBound(bound);
